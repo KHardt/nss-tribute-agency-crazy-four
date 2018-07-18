@@ -3,10 +3,11 @@ const NicolasCageDB = {};
 NicolasCageDB.execSummary = [];
 NicolasCageDB.career = [];
 NicolasCageDB.personal = [];
-NicolasCageDB.newFeed = [];
+NicolasCageDB.newsFeed = [];
 
 //Exec Summary stuff
 const collaborators = ["testPerson", "test2person"] 
+
 const portrait = {
     name: "",
     url: "link"
@@ -41,7 +42,7 @@ const works = [
         name: "The Weatherman",
         image: "#"
     }
-],
+]
 
 const residences = [
     {
@@ -132,6 +133,26 @@ const events = [
     },
 
 ]
+
+
+
+
+NicolasCageDB.execSummary.push(collaborators, portrait, alias, currentResidence)
+
+
+NicolasCageDB.career.push(intro, skillTalents, works, residences,awards)
+
+
+NicolasCageDB.personal.push(personalBasic, family)
+
+
+NicolasCageDB.newsFeed.push(events)
+
+
+console.log(NicolasCageDB.execSummary)
+console.log(NicolasCageDB.personal)
+console.log(NicolasCageDB.newsFeed)
+console.log(NicolasCageDB.career)
 
 
 
