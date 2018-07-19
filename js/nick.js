@@ -25,15 +25,11 @@ const loadDatabase = function (localStorageKey) {
   
   // collaborators, portrait, aliases, residence
   let paragraph = document.createElement("p");
-  paragraph.innerHTML = "Collaborators: <br/>";
+  paragraph.innerHTML = "Introduction: <br/>";
   container.appendChild(paragraph);
+  paragraph.innerHTML += myData.intro;
   
-  for (let i=0; i < myData.collaborators.length; i++) {
-    let currentItem = myData.collaborators[i];
-    paragraph.innerHTML += currentItem + "<br/>";
-    // container.appendChild(paragraph);
-  }
-  
+
   let portraitPara = document.createElement("p");
   portraitPara.innerHTML = "Portrait info: <br/>";
   container.appendChild(portraitPara);
