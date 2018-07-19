@@ -1,8 +1,8 @@
 .footerImages {
+   
     width:50px;
     height:50px;
+    margin: 0 auto 0 auto;
+    display: inline-block;
     
-}
-footer a{
-    display: inline;
 }
