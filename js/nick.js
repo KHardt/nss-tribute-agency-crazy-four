@@ -9,6 +9,14 @@ const loadDatabase = function (localStorageKey) {
   
   const myData = loadDatabase("nickStorage");
   
+  /*
+  *  is the solution to load our data and store under diff name tags
+  * in local storage.  then make a function out of the code below and pass
+  * the database tag name to the function thereby writing to the dom?
+  * then when you click a button at the top of the page, it selects
+  * who gets written to a main variable that is written to dom on click?
+  */
+  
   const container = document.querySelector(".page-container");
   
   // define a variable for each one of those keys
@@ -22,7 +30,7 @@ const loadDatabase = function (localStorageKey) {
   
   for (let i=0; i < myData.collaborators.length; i++) {
     let currentItem = myData.collaborators[i];
-    paragraph.innerHTML += currentItem + "<br/><h1>HEY EVERYONE</h1>";
+    paragraph.innerHTML += currentItem + "<br/>";
     // container.appendChild(paragraph);
   }
   
