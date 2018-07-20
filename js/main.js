@@ -39,6 +39,7 @@ $('.carousel').carousel({
   console.log("clearing document");
   container.innerHTML = "";
   // I want a reference to nickBigAssFunction so maybe I can troubleshoot in console
+  makeNickData();
   nickBigAssFunction();
   
   // container.innerHTML = fack;
