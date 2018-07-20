@@ -48,7 +48,7 @@ $('.carousel').carousel({
  function personalFunc() {
   console.log("clearing document");
   container.innerHTML = "";
-  container.innerHTML = "<h1>Personal Page information to be loaded from DB within this func";
+  klausBigFunction();
  }
 
  // D
@@ -56,6 +56,7 @@ $('.carousel').carousel({
   console.log("clearing document");
   container.innerHTML = "";
   container.innerHTML = "<h1>Newsfeed  Page information to be loaded from DB within this func";
+  DejanBigAssFunction();
  }
 
 
@@ -154,3 +155,118 @@ $('.carousel').carousel({
   } // nickBigAssFunction()
 
 
+  // Klaus fucntion for handling data here
+
+  function klausBigFunction() {
+
+    const loadDatabasePersonal = function (localStorageKey) {
+    
+        const databaseString = localStorage.getItem(localStorageKey)
+    
+        
+        return JSON.parse(databaseString)
+    } 
+    
+    let data = loadDatabasePersonal("NicolasCageDB")
+    //console.log(data) I did this to confirm. Then forgot why. Then paniced I did not confirm then asked Steve and drew a blank again
+    
+    
+    //loop was to verify all info was showing up which it is. 
+    //Writing to dom line can be used independently **NOTE cannot use dot notation completely to path to the desired object since part is in array- need index number as well
+    // for (i = 0; i < data.personal.length; i++) {
+    //     console.log(data.personal[i]);
+        
+    // }
+    
+    let addStuff = document.querySelector(".page-container")
+    
+    /*
+    addStuff.innerHTML += 
+        `<div>
+            <h2>Born: ${data.personal[0].birthCity}  ${data.personal[0].birthDate}</h2>
+            <h4>Famous Relations:</h4>
+        </div>`; */
+    
+    
+    let pInfo = data.personal[0];
+    function addPersonalData(test1) {
+        addStuff.innerHTML += 
+        `<div>
+            <h2>Born: ${test1.birthCity}  ${test1.birthDate}</h2>
+            <h4>Famous Relations:</h4>
+        </div>`;
+    }
+    
+    addPersonalData(pInfo)
+    
+    /*
+    /* data.personal.forEach(element => {
+        let addStuff1 = document.querySelector(".page-container").innerHTML += `<p>Born: ${element.birthDate}<p>`;
+     }); */
+    
+     
+     let person = data.personal[1];
+     
+     function addFamily(info){
+        for (let i = 0; i < info.length; i++) {
+            addStuff.innerHTML += 
+                `<div class="person-flex">
+                    <img src="${person[i].picture}">  
+                    <div>
+                        <h2>${person[i].name}</h2>
+                        <h3>${person[i].relationship}</h3>
+                        <h3>${person[i].begin_end}</h3>
+                    </div>
+                </div>`;
+        }
+     }
+    addFamily(person);
+    
+    console.log(data.personal[1])
+    
+    //  for (i = 0; i < data.personal[1].length; i++) {
+    //     addStuff = document.querySelector(".page-container").innerHTML += `<img src="${data.personal[1].picture}">  ${data.personal[0].birthDate}`
+    //  }
+    
+    
+    
+
+} // klausBigFunction()
+
+
+function DejanBigAssFunction() {
+
+  const loadDatabaseNews = function (localStorageKeyNews) {
+    // Get the string version of the database
+    const databaseStringNews = localStorage.getItem(localStorageKeyNews)
+ 
+    // Use JSON.parse() to convert the string back into an object
+    return JSON.parse(databaseStringNews)
+ }
+ let array = loadDatabaseNews("NicolasCageDBNewsFeed")
+ // console.log(loadDatabaseNews("NicolasCageDBNewsFeed"));
+ 
+ console.log(array)
+ 
+ const container = document.querySelector(".page-container");
+ 
+ 
+ function addNews(info1){
+     for (let i = 0; i < info1.length; i++) {
+       console.log(info1)
+         container.innerHTML +=
+         `<div class="newsCSS">
+            <img src="${info1[i].image}" class="image">
+            <div class="newsDetails">
+                <h2>${info1[i].name}</h2>
+                <p>${info1[i].date}<p>
+                <h3>${info1[i].location}</h3>
+                <h3>${info1[i].collaborators}</h3>
+                <p>${info1[i].information}</p>
+                <h5>${info1[i].link}</h5>
+              </div>
+            </div>`
+     }
+ }
+ addNews(array);
+}

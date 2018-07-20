@@ -32,7 +32,7 @@ console.log(NicolasCageDB.execSummary)
 
 
 // Persist the database to localStorage
-const saveDatabase = function (databaseObject, localStorageKey) {
+const saveDbexecutive = function (databaseObject, localStorageKey) {
     /*
         Convert the Object into a string.
     */
@@ -44,8 +44,8 @@ const saveDatabase = function (databaseObject, localStorageKey) {
     */
     localStorage.setItem(localStorageKey, stringifiedDatabase)
 }
-saveDatabase(NicolasCageDB.execSummary, "NicolasCageDB")
-//saveDatabase(executiveDatabase, "executivesummery")
+saveDbexecutive(NicolasCageDB.execSummary, "NicolasCageDB")
+//saveDbexecutive(executiveDatabase, "executivesummery")
 
 
 
