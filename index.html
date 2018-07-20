@@ -15,26 +15,23 @@
 <!-- using onload here and calling executive function to load that page first -->
 <body onload="execFunc()">
 
-
     <!-- NAV BAR -->
-
     <nav>
-            <ul class="nav">
-                    <li class="nav-item">
-                       <button id="Executive">Executive</button>
-                    </li>
-                    <li class="nav-item">
-                      <button id="Career">Career</button>
-                    </li>
-                    <li class="nav-item">
-                      <button id="Personal">Personal</button>
-                    </li>
-                    <li class="nav-item">
-                      <button id="Newsfeed">Newsfeed</button>
-                    </li>
-                  </ul>
+      <ul class="nav">
+        <li class="nav-item">
+            <button id="Executive">Executive</button>
+        </li>
+        <li class="nav-item">
+          <button id="Career">Career</button>
+        </li>
+        <li class="nav-item">
+          <button id="Personal">Personal</button>
+        </li>
+        <li class="nav-item">
+          <button id="Newsfeed">Newsfeed</button>
+        </li>
+      </ul>
     </nav>
-
 
     <div class="carouselContainer">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -58,51 +55,33 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+    </div>
+
+    <!--main-->
+    <main>
+
+      <!-- dynamically generated content will go below div here -->
+      <div class="page-container">
+
       </div>
-      <!--main-->
-      <main>
-
-        <!-- dynamically generated content will go below div here -->
-        <div class="page-container">
-
-
-
-
-        </div>
 
     </main>
 
-
-
-  <div class="footerWrapper">
-    <footer class="footerImages">
-      <ul>
-        <li>
-          <a href="#"><img src="image/facebook.svg" alt="facebook"></a>
-        </li>
-        <li>
-          <a href="#"><img src="image/instagram.svg" alt="instagram"></a>
-        </li>
-        <li>
-          <a href="#"><img src="image/twitter.svg" alt="twitter"></a>
-        </li>
-      </ul>
-    </footer>
-  </div>
-
-   <footer class="footerImages">
-     <ul>
-    <li>
-      <a href="#"><img src="image/facebook.svg" alt="facebook"></a>
-    </li>
-    <li>
-      <a href="#"><img src="image/instagram.svg" alt="instagram"></a>
-    </li>
-    <li>
-      <a href="#"><img src="image/twitter.svg" alt="twitter"></a>
-    </li>
-  </ul>
-  </footer>
+    <div class="footerWrapper">
+      <footer class="footerImages">
+        <ul>
+          <li>
+            <a href="#"><img src="image/facebook.svg" alt="facebook"></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/instagram.svg" alt="instagram"></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/twitter.svg" alt="twitter"></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
 
     <!-- bootstrap necessary CDNs -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -110,8 +89,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
     <!-- our individual scripts loaded here for data, and your data handling -->
+
+    <!-- note: I moved the data scripts above main.js so that they load before main calls them -->
     <script src="js/nickData.js"></script>
-    <script src="js/main.js"></script>
     <!-- Klaus files -->
     <script src="js/personalDB.js"></script>
     <!-- <script src="js/personal.js"></script> -->
@@ -122,9 +102,10 @@
     <script src="js/executiveDB.js"></script>
     <!-- <script src="js/executive.js" -->
 
-    ></script>
 
+    <!-- data is done loading, let's call main -->
+    <script src="js/main.js"></script>
+    
 
 </body>
-
 </html>
