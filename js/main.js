@@ -24,11 +24,6 @@ $('.carousel').carousel({
 * and then be called when their button on index.html is clicked
 */
 
-// reference to class page-container on index.html
-//const container = document.querySelector(".page-container");
-
- // functions to be called on "click" of respective button on index.html
-
  function execFunc() {
   console.log("clearing document");
   container.innerHTML = "";
@@ -37,15 +32,21 @@ $('.carousel').carousel({
 
  
  function careerFunc() {
-
+  console.log("clearing document");
+  container.innerHTML = "";
+  container.innerHTML = "<h1>Career page information to be loaded from database within this function</h1><br/>"
  }
 
  function personalFunc() {
-
+  console.log("clearing document");
+  container.innerHTML = "";
+  container.innerHTML = "<h1>Personal Page information to be loaded from DB within this func";
  }
 
  function newsfeedFunc() {
-
+  console.log("clearing document");
+  container.innerHTML = "";
+  container.innerHTML = "<h1>Newsfeed Page information to be loaded from DB within this func";
  }
 
   
@@ -59,15 +60,9 @@ const loadDatabase = function (localStorageKey) {
   return JSON.parse(databaseString);
 }
 
+// myData is now a reference to nickStorage DB
 const myData = loadDatabase("nickStorage");
 
-/*
-*  is the solution to load our data and store under diff name tags
-* in local storage.  then make a function out of the code below and pass
-* the database tag name to the function thereby writing to the dom?
-* then when you click a button at the top of the page, it selects
-* who gets written to a main variable that is written to dom on click?
-*/
 
 const container = document.querySelector(".page-container");
 
