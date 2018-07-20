@@ -1,6 +1,6 @@
 // code bootstrap needed for carousel.  JQuery reference so make sure CDN included on index.html
 
-$('.carousel').carousel({
+$('.carousel') .carousel({
   interval: 2000
 })
 
@@ -31,7 +31,8 @@ const container = document.querySelector(".page-container");
 function execFunc() {
 console.log("clearing document");
 container.innerHTML = "";
-container.innerHTML += "<h1>Executive Page to be loaded from DB within this func</h1><br/>";
+//container.innerHTML += "<h1>Executive Page to be loaded from DB within this func</h1><br/>";
+priyaExective();
 }
 
 // Nick Black's Area
@@ -152,3 +153,62 @@ let p6 = document.createElement("p");
   }
 
 } // nickBigAssFunction()
+
+
+
+
+const priyaExective
+    = function () {
+
+
+
+        const loadDatabase = function (localStorageKey) {
+            // Get the string version of the database
+            const databaseString = localStorage.getItem(localStorageKey)
+
+            // Use JSON.parse() to convert the string back into an object
+            return JSON.parse(databaseString)
+        }
+        console.log(loadDatabase("NicolasCageDB"));
+
+
+        const container = document.querySelector(".page-container")
+
+        const imgPortrait = document.createElement("img")
+        imgPortrait.className = "imgPort"
+        imgPortrait.src = NicolasCageDB.execSummary.portrait.url
+        container.appendChild(imgPortrait)
+
+
+
+
+        const portraitTitle = document.createElement("h2")
+        portraitTitle.className = "portraitHeader"
+        portraitTitle.innerHTML = `Name: ${NicolasCageDB.execSummary.portrait.name} `
+        container.appendChild(portraitTitle)
+
+
+
+        //const container=document.getElementById("executivesummery")
+        const aliasNames = document.createElement("h4")
+        aliasNames.className = "Aliasheader"
+        aliasNames.innerHTML = `Alias: ${NicolasCageDB.execSummary.alias.First} , ${NicolasCageDB.execSummary.alias.Second}`
+        //aliasNames.innerHTML=NicolasCageDB.execSummary.alias.Second
+        container.appendChild(aliasNames)
+
+
+        const collabNames = document.createElement("h4")
+        collabNames.className = "collabHeader"
+        collabNames.innerHTML = `Mother: ${NicolasCageDB.execSummary.collaborators.Mother}<br> Father:  ${NicolasCageDB.execSummary.collaborators.Father}`
+        container.appendChild(collabNames)
+
+        const currentRes = document.createElement("h4")
+        currentRes.className = "resHeader"
+        currentRes.innerHTML = `Location: ${NicolasCageDB.execSummary.currentResidence.location} ${NicolasCageDB.execSummary.currentResidence.date}`
+        container.appendChild(currentRes)
+
+
+
+    }
+
+   
