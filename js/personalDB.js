@@ -13,20 +13,21 @@ const family = [
     {
         name: "Francis Ford Coppola",
         relationship: "Uncle",
-        picture: "image/francis-ford-coppola-250.jpg",
+        picture: "../image/francis-ford-coppola-250.jpg",
+        begin_end: ""
     },
 
     {
         name: "Patricia Arquette",
         relationship: "ex-spouse",
-        picture: "arquette__140305185045.png ",
+        picture: "../image/arquette__140305185045.png ",
         begin_end: "1995-2001",
     },
 
     {
         name: "Lisa Maria Presley",
         relationship: "ex-spouse",
-        picture: "lisa-marie-presley-9542148-1-402.jpg",
+        picture: "../image/lisa-marie-presley-9542148-1-402.jpg",
         begin_end: "2002-2004"
 
     }
