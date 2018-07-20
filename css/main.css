@@ -12,9 +12,13 @@ h1 {
     font-weight: normal;
 }
 
-/* .flex-container {
-    background: rgba(20, 17, 17, 0.9);
-} */
+h3 {
+    font-size: 1.1em;
+    text-shadow: 1px 1px rgb(231, 231, 214);
+    text-decoration: underline;
+    color: rgb(10, 63, 9);
+    margin: 0;
+}
 
 .container-fluid {
     width: 100%;

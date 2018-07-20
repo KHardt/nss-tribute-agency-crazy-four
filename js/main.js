@@ -85,12 +85,12 @@ $('.carousel').carousel({
   // handle the data inside local storage for nick's data
     
     let paragraph = document.createElement("p");
-    paragraph.innerHTML = "<strong>Introduction</strong> <br/>";
+    paragraph.innerHTML = "<h3>Introduction</h3>";
     container.appendChild(paragraph);
     paragraph.innerHTML += myData.intro;
 
     let p2 = document.createElement("p");
-    p2.innerHTML = "<strong>Skills/talents</strong> <br/>";
+    p2.innerHTML = "<h3>Skills/talents</h3>";
     container.appendChild(p2);
  
     for (let i=0; i < myData.skills.length; i++) {
@@ -99,7 +99,7 @@ $('.carousel').carousel({
     }
 
     let p3 = document.createElement("p");
-    p3.innerHTML = "<strong>Public Works</strong> <br/>";
+    p3.innerHTML = "<h3>Public Works</h3>";
     container.appendChild(p3);
 
     for (let i=0; i < myData.works.length; i++) {
@@ -124,7 +124,7 @@ $('.carousel').carousel({
     }
 
   let p4 = document.createElement("p");
-    p4.innerHTML = "<br/><strong>Residence</strong> " + "<br/>";
+    p4.innerHTML = "<br/><h3>Residence</h3>";
     container.appendChild(p4);
   for (let i=0; i < myData.residence.length; i++) {
     // console.log(myData.residence[i]);
@@ -133,7 +133,7 @@ $('.carousel').carousel({
   }
 
   let p5 = document.createElement("p");
-    p5.innerHTML = "<strong>Collaborators</strong> " + "<br/>";
+    p5.innerHTML = "<h3>Collaborators</h3>";
     container.appendChild(p5);
   for (let i=0; i < myData.collaborators.length; i++) {
     let currentItem = myData.collaborators[i];
@@ -141,7 +141,7 @@ $('.carousel').carousel({
   }
 
   let p6 = document.createElement("p");
-    p6.innerHTML = "<strong>Awards</strong> " + "<br/>";
+    p6.innerHTML = "<h3>Awards</h3>";
     container.appendChild(p6);
     for (let i=0; i < myData.awards.length; i++) {
       for (var key in myData.awards[i]) {
