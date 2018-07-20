@@ -1,3 +1,10 @@
+
+
+ const   priyaExective
+ = function () {
+
+
+
 const loadDatabase = function (localStorageKey) {
     // Get the string version of the database
     const databaseString = localStorage.getItem(localStorageKey)
@@ -43,4 +50,4 @@ container.appendChild(currentRes)
 
 
 
-
+ }
