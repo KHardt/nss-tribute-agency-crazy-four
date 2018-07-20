@@ -1,4 +1,3 @@
-function makeNickData() {
     const localStorageKey = "nickStorage";
 
     // initialize the database in memory as an object 
@@ -15,17 +14,6 @@ function makeNickData() {
     HomeInventoryDatabase.collaborators = ["Quentin Tarantino", "John Travolta", "Steve Buschemi", 
         "Sean Connery", "Ed Harris", "Julianne Moore", "Meryl Streep", "Maggie Gyllenhaal", "Judy Greer"];
     HomeInventoryDatabase.awards = [];
-
-    // Create data that will be inserted into objects
-
-    // I used an object here since there were two types of things I wanted represented
-    // i.e. a name, and a photo.  I want to grab the url and use it to create
-    // an image object to display an image to the dom.  The case being that then
-    // we can populate any images we want to the dom as long as we have the url
-    // const portraitInfo = {
-    // 	name: "Nicholas Cage",
-    // 	photo: "photoURLhereToCreateImageObjectAndSrcFrom",
-    // }
 
     // objects for works
     const theRock = {
@@ -82,7 +70,7 @@ function makeNickData() {
 
 
     // I needed to put saveDatabase in here so it had access to localStorage variable
-    const saveDatabase = function (databaseObject) {
+    const saveNickDatabase = function (databaseObject) {
         // convert the object into a string.
         const stringifiedDatabase = JSON.stringify(databaseObject);
         
@@ -94,6 +82,6 @@ function makeNickData() {
 
 
     // Persist the database to localStorage
-    saveDatabase(HomeInventoryDatabase, "HomeInventory");
-}
+    saveNickDatabase(HomeInventoryDatabase, "HomeInventory");
+
 
