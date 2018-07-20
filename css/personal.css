@@ -1,0 +1,10 @@
+.person-flex {
+    display:flex;
+    padding: .75em;
+    border: solid 1px teal;
+}
+
+.person-flex img{
+    width: 300px;
+    height: 325px;
+}

@@ -11,6 +11,7 @@ console.log(loadDatabase("NicolasCageDB"));
 const container=document.getElementById("executivesummery")
 
 const imgPortrait=document.createElement("img")
+imgPortrait.className="imgPort"
 imgPortrait.src=NicolasCageDB.execSummary.portrait.url
 container.appendChild(imgPortrait)
 
