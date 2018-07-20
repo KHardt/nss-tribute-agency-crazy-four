@@ -112,8 +112,8 @@ $('.carousel').carousel({
           // if this doesn't work try adding quotes to currentItem w/ concatenate
           // currentItem += `${currentItem}`;
           x.setAttribute("src", currentItem);
-          x.setAttribute("width", "200");
-          x.setAttribute("height", "200");
+          x.setAttribute("width", "210");
+          x.setAttribute("height", "320");
           x.setAttribute("alt", "nic cage photo");
           container.appendChild(x);
           // don't write image url to DOM, jump above to parent loop's next iteration
@@ -124,7 +124,7 @@ $('.carousel').carousel({
     }
 
   let p4 = document.createElement("p");
-    p4.innerHTML = "<strong>Residence</strong> " + "<br/>";
+    p4.innerHTML = "<br/><strong>Residence</strong> " + "<br/>";
     container.appendChild(p4);
   for (let i=0; i < myData.residence.length; i++) {
     // console.log(myData.residence[i]);
