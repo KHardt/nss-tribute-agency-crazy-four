@@ -1,6 +1,6 @@
-const NicolasCageDB = {};
+ const NicolasCageDBPersonal = {};
 
-NicolasCageDB.personal = [];
+NicolasCageDBPersonal.personal = [];
 
 const personalBasic = {
     birthDate: "January 7th, 1964",
@@ -34,21 +34,21 @@ const family = [
 ];
 
 
-NicolasCageDB.personal.push(personalBasic, family)
+NicolasCageDBPersonal.personal.push(personalBasic, family)
 
 //console.log(NicolasCageDB.personal);
 
 
 
-const saveDatabase = function (databaseObject, localStorageKey) {
+const saveDatabasePersonal = function (databaseObject, localStorageKeyPersonal) {
    
     const stringifiedDatabase = JSON.stringify(databaseObject)
 
    
-   localStorage.setItem(localStorageKey, stringifiedDatabase)
+   localStorage.setItem(localStorageKeyPersonal, stringifiedDatabase)
 }
 
-saveDatabase(NicolasCageDB, "NicolasCageDB")
+saveDatabasePersonal(NicolasCageDBPersonal, "NicolasCageDBPersonal")
 
 
 /*const loadDatabase = function (localStorageKey) {

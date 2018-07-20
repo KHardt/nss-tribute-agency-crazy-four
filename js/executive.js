@@ -1,59 +1,55 @@
-const NicolasCageDB = {};
 
-NicolasCageDB.execSummary = [];
-NicolasCageDB.career = [];
-NicolasCageDB.personal = [];
-NicolasCageDB.newFeed = [];
 
-//Exec Summary stuff
-const collaborators = ["testPerson", "test2person"] 
-const portrait = {
-    name: "Nicholas Cage",
-    url: "https://nerdist.com/wp-content/uploads/2015/12/Nicolas-Cage-Con-Air.jpg"
-}
-const alias = ["Elvis", "Evil"];
-
-const currentResidence = {
-    location: "Las Vegas,Nevada",
-    date: "1981-present",
-}
-NicolasCageDB.execSummary.push(collaborators)
-NicolasCageDB.execSummary.push(portrait)
-NicolasCageDB.execSummary.push(alias)
-NicolasCageDB.execSummary.push(currentResidence)
-
-// Persist the database to localStorage
-const saveDatabase = function (databaseObject, localStorageKey) {
-    /*
-        Convert the Object into a string.
-    */
-   const stringifiedDatabase = JSON.stringify(databaseObject)
-
-   /*
-       Create a key in local storage, and store the string
-       version of your inventory database as the value
-   */
-   localStorage.setItem(localStorageKey, stringifiedDatabase)
-}
-saveDatabase(NicolasCageDB.execSummary, "NicolasCageDB")
-//saveDatabase(HomeInventoryDatabase, "HomeInventory")
+const priyaExective
+    = function () {
 
 
 
-const loadDatabase = function (localStorageKey) {
-    // Get the string version of the database
-    const databaseString = localStorage.getItem(localStorageKey)
+        const loadDatabase = function (localStorageKey) {
+            // Get the string version of the database
+            const databaseString = localStorage.getItem(localStorageKey)
 
-    // Use JSON.parse() to convert the string back into an object
-    return JSON.parse(databaseString)
-}
-console.log(loadDatabase("NicolasCageDB"));
-
-//var Element = document.getElementById("page-container").innerHTML;
+            // Use JSON.parse() to convert the string back into an object
+            return JSON.parse(databaseString)
+        }
+        console.log(loadDatabase("NicolasCageDB"));
 
 
-  
+        const container = document.getElementById("executivesummery")
 
-    
+        const imgPortrait = document.createElement("img")
+        imgPortrait.className = "imgPort"
+        imgPortrait.src = NicolasCageDB.execSummary.portrait.url
+        container.appendChild(imgPortrait)
 
 
+        const portraitTitle = document.createElement("h2")
+        portraitTitle.className = "portraitHeader"
+        portraitTitle.innerHTML = `Name: ${NicolasCageDB.execSummary.portrait.name}`
+        container.appendChild(portraitTitle)
+
+
+
+        //const container=document.getElementById("executivesummery")
+        const aliasNames = document.createElement("h4")
+        aliasNames.className = "Aliasheader"
+        aliasNames.innerHTML = `Alias: ${NicolasCageDB.execSummary.alias.First} ${NicolasCageDB.execSummary.alias.Second}`
+        //aliasNames.innerHTML=NicolasCageDB.execSummary.alias.Second
+        container.appendChild(aliasNames)
+
+
+        const collabNames = document.createElement("h4")
+        collabNames.className = "collabHeader"
+        collabNames.innerHTML = `${NicolasCageDB.execSummary.collaborators.testperson1} ${NicolasCageDB.execSummary.collaborators.testperson2}`
+        container.appendChild(collabNames)
+
+        const currentRes = document.createElement("h4")
+        currentRes.className = "resHeader"
+        currentRes.innerHTML = `${NicolasCageDB.execSummary.currentResidence.location} ${NicolasCageDB.execSummary.currentResidence.date}`
+        container.appendChild(currentRes)
+
+
+
+    }
+
+   
