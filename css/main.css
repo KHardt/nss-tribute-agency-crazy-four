@@ -1,8 +1,108 @@
-.footerImages {
-   
-    width:50px;
-    height:50px;
-    margin: 0 auto 0 auto;
-    display: inline-block;
-    
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../image/background_main.jpg");
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    border-top: 4px solid black;
 }
+
+h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+/* .flex-container {
+    background: rgba(20, 17, 17, 0.9);
+} */
+
+.footerImages {
+    width: 30px;
+    height: 30px;
+    /* margin: 0 auto 0 auto; */
+    box-shadow: 1px 5px 8px rgb(179, 187, 182);
+}
+
+.footerImages li {
+    list-style: none;
+    padding: 1px;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.footerImages a {
+    text-decoration: none;
+}
+
+nav {
+    background: rgba(43, 58, 44, 0.7);
+    padding: 0.4em;
+}
+
+
+nav button {
+    
+    padding: 0.12em;
+    width: 6em;
+    background-color: rgb(62, 144, 148);
+    /* border: 10px solid; */
+    text-shadow: 1px 1px rgb(255, 250, 206);
+    
+    box-shadow: 1px 5px 8px rgb(1, 31, 13);
+    border-radius: 10px;
+    font-size: 2em;
+    font-weight: normal;
+    font-family: 'Francois One', sans-serif;
+    border: 1px solid black;
+    
+
+}
+
+nav ul li {
+    margin: 0 auto 0 auto;
+}
+
+
+button:hover {
+    /* background-color: rgb(80, 127, 129); */
+    border: 2px solid rgb(2, 36, 36);
+    background-color:  rgb(38, 152, 158);
+    text-shadow: 1px 1px rgb(255, 250, 206);
+    cursor: crosshair;
+}
+
+/* gets rid of highlighted boxed when selected */
+button:focus {
+    outline: none;
+}
+
+.page-container {
+    background: rgba(5, 245, 213, 0.2);
+    border-top: 2px solid black;
+    /* border-bottom: 1px solid black; */
+    padding: 1.2em;
+    box-shadow: 1px 3px 4px rgb(1, 31, 13);
+}
+
+.page-container p {
+    /* padding: 0.3em; */
+    font-size: 1.15em;
+}
+
+.page-container img {
+    padding: 1.2em;
+    box-shadow: 1px 5px 8px rgb(1, 31, 13);
+    /* border: 3px solid black; */
+
+}
+
+.carouselContainer {
+    border-top: 3px solid black;
+}
+
+.carouselContainer img {
+    width: 100%;
+    height: 300px;
+}
+
+
