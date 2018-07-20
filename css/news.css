@@ -1,0 +1,22 @@
+.newsCSS{
+    display: flex;
+    background-color: white;
+    padding: 1em;
+    border: 5px solid goldenrod;
+    margin: 1em;
+
+}
+
+.image{
+    height: 50%;
+    width: 50%;
+    padding: 2em;
+}
+
+.newsDetails{
+    padding: 4em;
+}
+
+/* .newsDetails{
+
+} */
