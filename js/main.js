@@ -58,9 +58,17 @@ $('.carousel').carousel({
   container.innerHTML = "<h1>Newsfeed  Page information to be loaded from DB within this func";
  }
 
-  /*
-  * Need to make everything store to one big DOMobject string and then append it to the DOM
-  */
+
+ /*
+ *
+ *  Nick Black
+ * 
+ *  This loads the data from local storage for Nick, and then 
+ *  iterates over it creating paragraph html elements and appending them
+ *  to the DOM with the appropriate data contained inside.
+ * 
+ * 
+ */ 
  const nickBigAssFunction = function () {
   // function expression 
   // loadDatabase can be invoked with loadDatabase()
@@ -74,29 +82,12 @@ $('.carousel').carousel({
   // myData is now a reference to nickStorage DB
   const myData = loadDatabase("nickStorage");
 
-  // this might have to be declared outside of this function 
-  // const container = document.querySelector(".page-container");
-
-
-  /******************************************************************
-  ******************************************************************
-  * Handle the data from the loaded DB *****************************
-  * ****************************************************************
-  * *****************************************************************
-  * might not need to return anything if it writes to DOM container
-  */
-
-
-  let oneBigString = "";
+  // handle the data inside local storage for nick's data
     
     let paragraph = document.createElement("p");
     paragraph.innerHTML = "<strong>Introduction</strong> <br/>";
     container.appendChild(paragraph);
     paragraph.innerHTML += myData.intro;
-
-    // append introduction to oneBigString
-    console.log("Contents of paragraph " + paragraph);
-    // oneBigString += paragraph;
 
     let p2 = document.createElement("p");
     p2.innerHTML = "<strong>Skills/talents</strong> <br/>";
@@ -106,10 +97,6 @@ $('.carousel').carousel({
       currentItem = myData.skills[i];
       p2.innerHTML += currentItem + "<br/>";
     }
-
-    // append Skills/talents to oneBigString
-     console.log("Contents of p2: " + p2);
-    // oneBigString += p2;
 
     let p3 = document.createElement("p");
     p3.innerHTML = "<strong>Public Works</strong> <br/>";
@@ -136,11 +123,6 @@ $('.carousel').carousel({
       }
     }
 
-    // append public works to oneBigString
-    // oneBigString += p3;
-
-
-
   let p4 = document.createElement("p");
     p4.innerHTML = "<strong>Residence</strong> " + "<br/>";
     container.appendChild(p4);
@@ -150,19 +132,13 @@ $('.carousel').carousel({
     p4.innerHTML += currentItem + "<br/>";
   }
 
-  // append residenceParagraph to oneBigString
-  // oneBigString += p4;
-
   let p5 = document.createElement("p");
     p5.innerHTML = "<strong>Collaborators</strong> " + "<br/>";
     container.appendChild(p5);
   for (let i=0; i < myData.collaborators.length; i++) {
-    // console.log(myData.collaborators[i]);
     let currentItem = myData.collaborators[i];
     p5.innerHTML += currentItem + "<br/>";
   }
-  // append Collaborators to oneBigString
-  // oneBigString += p5;
 
   let p6 = document.createElement("p");
     p6.innerHTML = "<strong>Awards</strong> " + "<br/>";
@@ -175,12 +151,6 @@ $('.carousel').carousel({
       p6.innerHTML += "<br/>";
     }
 
-    // append awardsParagraph to oneBigString
-    //  oneBigString += p6;
-
-
-
-
-  }
+  } // nickBigAssFunction()
 
 
