@@ -13,26 +13,53 @@ const family = [
     {
         name: "Francis Ford Coppola",
         relationship: "Uncle",
-        picture: "#",
+        picture: "../image/francis-ford-coppola-250.jpg",
+        begin_end: ""
     },
 
     {
         name: "Patricia Arquette",
         relationship: "ex-spouse",
-        picture: "#",
+        picture: "../image/arquette__140305185045.png ",
         begin_end: "1995-2001",
     },
 
     {
         name: "Lisa Maria Presley",
         relationship: "ex-spouse",
-        picture: "#",
+        picture: "../image/lisa-marie-presley-9542148-1-402.jpg",
         begin_end: "2002-2004"
 
     }
-]
+];
 
 
 NicolasCageDB.personal.push(personalBasic, family)
 
-console.log(NicolasCageDB.personal)
+//console.log(NicolasCageDB.personal);
+
+
+
+const saveDatabase = function (databaseObject, localStorageKey) {
+   
+    const stringifiedDatabase = JSON.stringify(databaseObject)
+
+   
+   localStorage.setItem(localStorageKey, stringifiedDatabase)
+}
+
+saveDatabase(NicolasCageDB, "NicolasCageDB")
+
+
+/*const loadDatabase = function (localStorageKey) {
+    const databaseString = localStorage.getItem(localStorageKey)
+
+    
+    return JSON.parse(databaseString)
+} */
+
+//let testIt = loadDatabase("NicolasCageDB")
+//console.log(loadDatabase("NicolasCageDB"));
+
+
+
