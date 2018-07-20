@@ -48,7 +48,7 @@ const saveDatabasePersonal = function (databaseObject, localStorageKeyPersonal) 
    localStorage.setItem(localStorageKeyPersonal, stringifiedDatabase)
 }
 
-saveDatabasePersonal(NicolasCageDBPersonal, "NicolasCageDB")
+saveDatabasePersonal(NicolasCageDBPersonal, "NicolasCageDBPersonal")
 
 
 /*const loadDatabase = function (localStorageKey) {

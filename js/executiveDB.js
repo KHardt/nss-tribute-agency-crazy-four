@@ -1,8 +1,8 @@
 const NicolasCageDB = {};
 
 NicolasCageDB.execSummary = {
-    
-    
+
+
     portrait: {
         name: "Nicholas Cage",
         url: "https://nerdist.com/wp-content/uploads/2015/12/Nicolas-Cage-Con-Air.jpg"
@@ -10,16 +10,16 @@ NicolasCageDB.execSummary = {
     alias:
     {
         First: "nick",
-        Second:"Cage"
+        Second: "Cage"
     },
-    
-    
+
+
     collaborators: {
-        testperson1: "Mother",
-        testperson2: "Father"
+        Mother:"Joy Vogelsang",
+        Father:"August Coppola"
 
     },
-    
+
     currentResidence: {
         location: "Las Vegas,Nevada",
         date: "1981-present",
@@ -45,7 +45,7 @@ const saveDbexecutive = function (databaseObject, localStorageKey) {
     localStorage.setItem(localStorageKey, stringifiedDatabase)
 }
 saveDbexecutive(NicolasCageDB.execSummary, "NicolasCageDB")
-//saveDbexecutive(executiveDatabase, "executivesummery")
+//saveDatabase(executiveDatabase, "executivesummery")
 
 
 
